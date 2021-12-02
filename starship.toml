@@ -14,13 +14,13 @@ $line_break\
 $character"""
 
 [directory]
-format = "[\uE0B0](fg:#81A1C1 inverted)[ $path$readonly ]($style)"
+format = "[\uE0B0](fg:#81A1C1 inverted)[ $path$readonly ]($style)[\uE0B0](fg:#81A1C1)"
 style = "fg:#81A1C1 inverted"
 truncate_to_repo = false
 truncation_length = 42
 
 [git_branch]
-format = "[\uE0B0](fg:#81A1C1 bg:#5E81AC)[ $symbol$branch ]($style)"
+format = "[\uE0B0](fg:#5E81AC inverted)[ $symbol$branch ]($style)"
 style = "bg:#5E81AC"
 
 [git_commit]
@@ -39,4 +39,4 @@ style = "bg:#5E81AC"
 disabled = false
 added_style = "fg:green inverted"
 deleted_style = "fg:red inverted"
-format = "[\uE0B0](fg:#5E81AC bg:green)[ +$added ]($added_style)[\uE0B0](fg:green bg:red)[ -$deleted ]($deleted_style)[\uE0B0](fg:red)"
+format = "([\uE0B0](fg:#5E81AC bg:green)[ +$added ]($added_style)[\uE0B0](fg:green bg:red)[ -$deleted ]($deleted_style)[\uE0B0](fg:red))"
