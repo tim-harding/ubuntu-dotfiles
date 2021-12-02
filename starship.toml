@@ -39,4 +39,4 @@ style = "bg:#5E81AC"
 disabled = false
 added_style = "fg:green inverted"
 deleted_style = "fg:red inverted"
-format = "([\uE0B0](fg:#5E81AC bg:green)[ +$added ]($added_style)[\uE0B0](fg:green bg:red)[ -$deleted ]($deleted_style)[\uE0B0](fg:red))"
+format = "[\uE0B0](fg:#5E81AC bg:green)([ +$added ]($added_style))[\uE0B0](fg:green bg:red)([ -$deleted ]($deleted_style))[\uE0B0](fg:red)"
