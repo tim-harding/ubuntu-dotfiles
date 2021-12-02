@@ -4,40 +4,45 @@ add_newline = true
 # $hostname\
 
 format = """
-[\uE0B0](fg:cyan inverted)\
+[\uE0B0](fg:#81A1C1 inverted)\
 $directory\
-[\uE0B0](fg:cyan bg:purple)\
+[\uE0B0](fg:#81A1C1 bg:yellow)\
 $git_branch\
-[\uE0B0](fg:purple bg:green)\
+[\uE0B0](fg:yellow bg:#5E81AC)\
 $git_commit\
-[\uE0B0](fg:green bg:yellow)\
 $git_state\
-[\uE0B0](fg:yellow bg:red)\
+[\uE0B0](fg:#5E81AC bg:green)\
+$git_metrics\
+[\uE0B0](fg:red bg:#D08770)\
 $git_status\
-[\uE0B0](fg:red)\
+[\uE0B0](fg:#D08770)\
 $line_break\
 $character"""
 
 [directory]
 format = "[ $path$readonly ]($style)"
-style = "fg:cyan inverted bold"
+style = "fg:#81A1C1 inverted bold"
 truncate_to_repo = false
 truncation_length = 42
 
 [git_branch]
 format = "[ $symbol$branch ]($style)"
-style = "fg:purple inverted bold"
+style = "fg:yellow inverted bold"
 
 [git_commit]
 format = "[ \\($hash$tag\\) ]($style)"
-style = "fg:green inverted"
-tag_disabled = false
-only_detached = false
-
-[git_state]
-format = '\([ $state($progress_current/$progress_total) ]($style)\)'
 style = "fg:yellow inverted"
 
+[git_state]
+format = '[ \($state($progress_current/$progress_total)\) ]($style)'
+style = "fg:yellow inverted"
+
+[git_metrics]
+disabled = false
+added_style = "fg:green inverted"
+deleted_style = "fg:red inverted"
+format = "[ +$added ]($added_style)[\uE0B0](fg:green bg:red)[ -$deleted ]($deleted_style)"
+
 [git_status]
-format = '([ \[$all_status$ahead_behind\] ]($style))'
-style = "fg:red inverted"
+format = '([ $all_status$ahead_behind ]($style))'
+style = "fg:#D08770 inverted"
