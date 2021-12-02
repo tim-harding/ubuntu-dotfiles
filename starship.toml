@@ -14,7 +14,7 @@ $line_break\
 $character"""
 
 [directory]
-format = "[\uE0B0](fg:#4C566A inverted)[ $path$readonly ]($style)[\uE0B0](fg:#4C566A)"
+format = "[\uE0B2](fg:#4C566A)[ $path$readonly ]($style)[\uE0B0](fg:#4C566A)"
 style = "fg:#D8DEE9 bg:#4C566A"
 truncate_to_repo = false
 truncation_length = 42
