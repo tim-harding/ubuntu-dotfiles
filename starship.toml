@@ -24,15 +24,15 @@ format = "[\uE0B0](fg:#5E81AC inverted)[ $symbol$branch ]($style)"
 style = "bg:#5E81AC"
 
 [git_commit]
-format = "[\uE0B1](fg:#D8DEE9 bg:#5E81AC)[ \\($hash$tag\\) ]($style)"
+format = "[\uE0B1](fg:#D8DEE9 bg:#5E81AC)([ $hash$tag ]($style))"
 style = "bg:#5E81AC"
 
 [git_state]
-format = '[\uE0B1](fg:#D8DEE9 bg:#5E81AC)[ \($state($progress_current/$progress_total)\) ]($style)'
+format = '[\uE0B1](fg:#D8DEE9 bg:#5E81AC)([ $state($progress_current/$progress_total) ]($style))'
 style = "bg:#5E81AC"
 
 [git_status]
-format = "[\uE0B1](fg:#D8DEE9 bg:#5E81AC)[ $all_status$ahead_behind ]($style)"
+format = "[\uE0B1](fg:#D8DEE9 bg:#5E81AC)([ $all_status$ahead_behind ]($style))"
 style = "bg:#5E81AC"
 
 [git_metrics]
