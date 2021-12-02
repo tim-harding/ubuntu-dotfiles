@@ -1,23 +1,43 @@
 add_newline = true
 
+# $username\
+# $hostname\
+
 format = """
-$username\
-$hostname\
+[\uE0B0](fg:cyan inverted)\
 $directory\
+[\uE0B0](fg:cyan bg:purple)\
 $git_branch\
+[\uE0B0](fg:purple bg:green)\
 $git_commit\
+[\uE0B0](fg:green bg:yellow)\
 $git_state\
-$git_metrics\
+[\uE0B0](fg:yellow bg:red)\
 $git_status\
+[\uE0B0](fg:red)\
 $line_break\
 $character"""
 
-[memory_usage]
-disabled = false
-
 [directory]
+format = "[ $path$readonly ]($style)"
+style = "fg:cyan inverted bold"
 truncate_to_repo = false
 truncation_length = 42
 
-[git_metrics]
-disabled = false
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+style = "fg:purple inverted bold"
+
+[git_commit]
+format = "[ \\($hash$tag\\) ]($style)"
+style = "fg:green inverted"
+tag_disabled = false
+only_detached = false
+
+[git_state]
+format = '\([ $state($progress_current/$progress_total) ]($style)\)'
+style = "fg:yellow inverted"
+
+[git_status]
+format = '([ \[$all_status$ahead_behind\] ]($style))'
+style = "fg:red inverted"
