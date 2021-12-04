@@ -1,5 +1,5 @@
 if status is-interactive
-	alias ls="exa -la"
+	alias ls="exa --long --all --grid --git --icons --header --no-user --no-permissions"
 	starship init fish | source
 	set -Ux EDITOR nvim
 end
