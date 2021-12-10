@@ -34,6 +34,16 @@ style = "bg:#5E81AC"
 [git_status]
 format = "[\uE0B1](fg:#D8DEE9 bg:#5E81AC)([ $all_status$ahead_behind ]($style))"
 style = "bg:#5E81AC"
+ahead = "↑${count}"
+diverged = "⇕↑${ahead_count}↓${behind_count}"
+behind = "↓${count}"
+conflicted = "!=${count}"
+staged = "+${count}"
+deleted = "-${count}"
+renamed = "->${count}"
+untracked = "?${count}"
+modified = "!${count}"
+stashed = "\\$${count}"
 
 [git_metrics]
 disabled = false
