@@ -47,6 +47,6 @@ stashed = "\\$${count}"
 
 [git_metrics]
 disabled = false
-added_style = "fg:green inverted"
-deleted_style = "fg:red inverted"
+added_style = "fg:bright-white bg:green"
+deleted_style = "fg:#D8DEE9 bg:red"
 format = "[\uE0B0](fg:#5E81AC bg:green)([ +$added ]($added_style))[\uE0B0](fg:green bg:red)([ -$deleted ]($deleted_style))[\uE0B0](fg:red)"
