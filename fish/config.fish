@@ -3,6 +3,7 @@ if status is-interactive
 	alias smerge="/mnt/c/Program\ Files/Sublime\ Merge/smerge.exe"
 	starship init fish | source
 	set -Ux EDITOR nvim
+	set fish_greeting
 end
 
 fish_add_path /home/tim/personal/21/11/WSL2-Linux-Kernel/tools/perf
