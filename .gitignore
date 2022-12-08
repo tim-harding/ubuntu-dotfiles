@@ -1,5 +1,5 @@
-fish
-!fish/fish_config.fish
+fish/**/*
+!fish/config.fish
 !fish/fish_plugins
 gcloud
 gh
