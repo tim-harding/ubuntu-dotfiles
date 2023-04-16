@@ -14,9 +14,9 @@ if status is-interactive
 
 	fish_add_path /home/linuxbrew/.linuxbrew/bin
 	fish_add_path ~/miscellaneous/software/zig-linux-x86_64-0.10.0
+	fish_add_path /opt/riscv/bin
 
 	set --global tide_right_prompt_items time newline cmd_duration 
-	fish_vi_key_bindings
 end
 
 # Updates PATH for the Google Cloud SDK.
