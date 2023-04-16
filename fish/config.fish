@@ -1,6 +1,6 @@
 # Note: wslview to open files in the default application
 if status is-interactive
-	set -Ux EDITOR nvim
+	set -Ux EDITOR lvim
 	set fish_greeting
 
 	abbr gs git switch
